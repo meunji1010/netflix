@@ -1,0 +1,46 @@
+.faq{
+  @include conponent_size;
+  h2{
+    margin: 10px 0;
+  }
+}
+.faq-list{
+  li{
+    margin: 5px 0;
+    button{
+      display: flex;
+      justify-content: space-between;
+      background-color: #444;
+      text-align: left;
+      color: $text-color;
+      font-size: 24px;
+      width: 100%;
+      
+      padding: 10px;
+      position: relative;
+    }
+    button:hover{
+      background-color: #555;
+    }
+    p{
+      background-color: #444;
+      height: 0;
+      opacity: 0;
+      color: $text-color;
+      font-size: 24px;      
+      transition: 0.5s;
+    }
+    p.open{
+      height: 200px;
+      padding: 10px;
+      opacity: 1;
+      @include responsive($breakpoint-medium){
+        height: 300px;
+      }
+      @include responsive($breakpoint-small){
+        height: 400px;
+      }
+    }
+
+  }
+}
